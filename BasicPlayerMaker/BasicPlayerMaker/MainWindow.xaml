@@ -1,0 +1,24 @@
+﻿<Window x:Class="BasicPlayerMaker.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BasicPlayerMaker"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Canvas x:Name="PlayerSpace" Focusable="True">
+
+
+        <!-- Text Block. Use TextBox instead if you want to type into it.-->
+        <TextBlock Text="The BASE program: You control the red square with the arrow keys. Press Space to create a random green square and moving into the green square destroys it. Moving into the blue square changes its color." TextWrapping="WrapWithOverflow" Width="500"/>
+
+        <!-- This Creates a Rectangle -->
+        <!-- There is a Name and Tag-->
+        <!-- Canvas.Right controls the x position and Canvas.Top controls y posion-->
+        <Rectangle Name="Player" Height="25" Width="25" Fill="Red" Canvas.Left="45" Canvas.Top="189"/>
+
+        <!-- A Block To Intersect With-->
+        <!--  The TAG is similar to the ID in Javascript -->
+        <Rectangle Tag="ThisThing" Height="25" Width="25" Fill="blue" Canvas.Left="230" Canvas.Top="184"/>
+    </Canvas>
+</Window>
